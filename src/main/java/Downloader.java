@@ -5,8 +5,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class Downloader {
-
+/**
+ * Create object that download and crawl on whole domain
+ */
+public class Downloader extends Thread {
+    /**
+     * @param unique
+     */
     public static Set<String> uniqueURL = new HashSet<String>();
     public static String my_site;
     public String allLinks;
@@ -34,4 +39,5 @@ public class Downloader {
         } catch (IOException ex) {}
         catch (StackOverflowError err){ return; }
     }
+
 }

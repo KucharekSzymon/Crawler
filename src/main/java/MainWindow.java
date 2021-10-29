@@ -89,9 +89,11 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void jButton1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jButton1.setEnabled(false);
         Downloader obj = new Downloader();
+        obj.run();
         obj.my_site = jTextField2.getText();
         obj.get_links(jTextField2.getText());
         jTextArea1.append(obj.allLinks);
